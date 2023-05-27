@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
 int main()
@@ -10,6 +9,7 @@ int main()
     for(int i=1;i<=n;i++){
         q.push(i);
     }
+    
     while(q.size()>1){
         int p=0;
         int r;

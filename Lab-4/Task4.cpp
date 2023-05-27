@@ -6,18 +6,20 @@ int main()
 {
     int n;
     cin>>n;
-    queue<int>q;
-    while(n!=-1){
-        q.push(n);
+    queue<int>q;    //passenger with required number of tickets
+    while(n!=-1){   
+        q.push(n);  //input taking 
         cin>>n;
     }
+
     int k;
     cin>>k;
-    int si=q.size();
-    int num =k;
-    int r;
+
+    int num =k;  //desired position
+    int r;   
     int ans=0;
-    while(num>=0){
+
+    while(num >= 0){  
         r=q.front();
         q.pop();
         q.push(r-1);

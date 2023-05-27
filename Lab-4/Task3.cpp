@@ -2,10 +2,11 @@
 using namespace std;
 // Push into the Stack
 queue<int>q;
+
 void push_s(int x) {
-    queue<int>q1;
+    queue<int>q1;    //taking a new queue q1 to insert q 
     while(!q.empty()){
-        q1.push(q.front());
+        q1.push(q.front()); //q is inserting into q1 in the backward order
         q.pop();
     }
     q.push(x);
@@ -14,6 +15,7 @@ void push_s(int x) {
         q1.pop();
     }
 }
+
 // Removes the element on top of the stack.
 void pop_s() {
         q.pop();
@@ -24,8 +26,10 @@ int top_s() {
 }
 // Return whether the stack is empty.
 bool empty_s() {
-    if(q.empty())return true;
-    else return false;
+    if(q.empty())
+      return true;
+    else 
+      return false;
 }
 
 int main() {

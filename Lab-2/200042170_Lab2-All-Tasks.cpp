@@ -1,7 +1,6 @@
 ﻿#include<bits/stdc++.h>
 using namespace std;
 
-
 class Dynamic_Array{
     public:
     int Size;
@@ -68,15 +67,11 @@ void RemoveOccurs(Dynamic_Array arr,int val){
         int size = arr.Get_Size();
         int i;
 
-
         for(i = 0; i < size; i++){
             if(arr.Get(i) == val)
             cnt++;
         }
-
-
         int new_arr[(size - cnt)];
-
 
         int ind = 0;
         for(i = 0; i < size; i++){
@@ -86,16 +81,12 @@ void RemoveOccurs(Dynamic_Array arr,int val){
             }
         }
 
-
         int sz = (sizeof(new_arr)/sizeof(new_arr[0]));
-
 
         for(i = 0; i < size; i++){
             cout << new_arr[i] << " ";
         }
-
-
-    return;
+        return;
 }
 
 
@@ -111,7 +102,6 @@ void NewRemove(Dynamic_Array arr , int val){
             count++;
         }
     }
-
 
     int *newarr = new int[s - count];
     for(int i=0;i<s-count;i++){
@@ -129,17 +119,11 @@ int main(){
         arr.PushBack(100 + i);
     }
 
-
     for(int i = 0; i < arr.Get_Size();i++){
         cout << arr.Get(i)<<" ";
     }
-
-
     cout <<"\n";
-
-
     arr.Reverse();
-
 
     for(int i = 0; i < arr.Get_Size();i++){
         cout << arr.Get(i)<<" ";
@@ -149,10 +133,7 @@ int main(){
 
 
 // Task : 2 :
-
-
     Dynamic_Array arr2;
-
 
     arr2.PushBack(0);
     arr2.PushBack(1);
@@ -162,7 +143,6 @@ int main(){
     arr2.PushBack(0);
     arr2.PushBack(4);
     arr2.PushBack(2);
-
 
     cout<<"\n\n";
     cout<<"Task-2 :"<<endl;
@@ -175,8 +155,6 @@ int main(){
     
     RemoveOccurs(arr2,2);
 
-
- 
     Dynamic_Array arr3;
 
 
@@ -189,7 +167,6 @@ int main(){
     arr3.PushBack(4);
     arr3.PushBack(2);
 
-
     cout<<"\n\n";
     cout<<"Bonus Task:"<<endl;
 
@@ -200,6 +177,5 @@ int main(){
     cout<<"\n\n";
     
     NewRemove(arr3,2);
-
 
 }

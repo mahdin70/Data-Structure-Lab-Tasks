@@ -62,7 +62,8 @@ class Solution{
        for(int i=0; i<n; i++){
            first = first->next;
        }  
-       printList(first); 
+       printList(first);
+        
        while(first != NULL){
            second = second->next;
            first = first->next;

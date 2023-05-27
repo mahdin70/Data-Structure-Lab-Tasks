@@ -10,12 +10,12 @@ public:
         Queue(){
             Front =-1;
             Rear =-1;
-          }
+        }
         bool IsFull(){
-            if(Front==0 && Rear==9){
+            if(Front==0 && Rear==9){  
                 return true;
             }
-            else if(Front==Rear+1){
+            else if(Front==Rear+1){   //front and rear is the adjacent position in circular queue
                 return true;
             }
             else{
@@ -35,23 +35,23 @@ public:
         void EnQueue(int k){
                 if(IsEmpty()){
                     Front++;
-                    Rear =(Rear+1)%10;
+                    Rear =(Rear+1)%10;    // When the Queue is empty the front is increamented to 0 that is Front++ ,and also the Rear is also increamented to 0 but after this small operation
                     arr[Rear]=k;
                 }
                 else if (IsFull()){
-                    cout<<"it's full"<<'\n';
+                    cout<<"Full"<<'\n';
                 }
                 else{
-                     Rear =(Rear+1)%10;
+                     Rear =(Rear+1)%10;  // Same thing as previous
                      arr[Rear]=k;
                 }
         }
         void DeQueue(){
                 if(IsEmpty()){
-                    cout<<"it's empty"<<'\n';
+                    cout<<"Empty"<<'\n';
                 }
                 else{
-                    Front=(Front+1)%10;
+                    Front=(Front+1)%10; // Changing the front index to the next one
                 }
         }
         void ShowFront(){
@@ -60,10 +60,9 @@ public:
         void ShowRear(){
                 cout<<"Rear"<<arr[Rear]<<'\n';
         }
-
 };
-int main()
-{
+
+int main(){
     CircularQueue q;
     for(int i=1;i<10;i++){
             q.EnQueue(i);
